@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from "next/link";
 import Layout from '../components/layout';
 
-const products = [{ name: "bag" }, { name: "shoes" }, { name: "socks" }];
+const products = [{ name: "bag", color: 'red' }, { name: "shoes", color: 'green' }, { name: "socks", color: 'pink' }];
 export default function Home() {
   return (
     <div>
@@ -18,7 +18,7 @@ export default function Home() {
         {products.map((product) => {
           return (
             <li key={product.name}>
-              <Link href={`/products/${product.name}`} >
+              <Link href={`/products/${product.name}/${product.color}`} >
                 <a>{product.name}</a>
               </Link>
             </li>
