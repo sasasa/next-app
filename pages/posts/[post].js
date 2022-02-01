@@ -2,7 +2,7 @@ import useSWR from 'swr';
 import { useRouter } from "next/router";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function post({ post }) {
+export default function Post({ post }) {
   const router = useRouter();
   const { data, error } = useSWR(
     `https://jsonplaceholder.typicode.com/posts/${router.query.post}`,

@@ -3,7 +3,7 @@ import useSWR from 'swr';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function index({ posts }) {
+export default function Index({ posts }) {
   const { data, error } = useSWR(
     'https://jsonplaceholder.typicode.com/posts',
     fetcher
